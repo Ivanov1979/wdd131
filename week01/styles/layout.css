@@ -1,0 +1,73 @@
+/* Reset */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root{
+  --brand: #0b5cab;
+  --nav: #333;
+  --ink: #111;
+  --ink-inv: #fff;
+  --bg: #f6f7fb;
+}
+
+/* ✅ Use CSS Grid on the body */
+body{
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto; /* header | main | footer */
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+}
+
+/* Header */
+header{ background: var(--brand); color: var(--ink-inv); }
+header h1{ text-align: center; padding: 1rem; }
+
+/* ✅ Use CSS Flex on the navigation menu */
+.navigation{
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: .25rem;
+  background: var(--nav);
+  padding: .5rem;
+}
+.navigation li{ flex: 1 1 auto; max-width: 14rem; }
+.navigation a{
+  display: block;
+  color: #eee;
+  text-decoration: none;
+  text-align: center;
+  padding: .6rem .9rem;
+  border-radius: .35rem;
+}
+.navigation a:hover{
+  background: #555;
+  text-decoration: underline;
+  text-decoration-color: yellow;
+}
+
+/* Main layout (stack on mobile, 2 cols on wide) */
+main{
+  display: grid;
+  gap: 1rem;
+  padding: 1rem;
+}
+@media (min-width: 800px){
+  main{ grid-template-columns: 2fr 1fr; } /* article | aside */
+}
+article, aside{
+  background: #fff;
+  border: 1px solid #e3e6ef;
+  border-radius: .5rem;
+  padding: 1rem;
+}
+
+/* Footer */
+footer{
+  text-align: center;
+  padding: 1rem;
+  background: #0a4c8f;
+  color: var(--ink-inv);
+}
