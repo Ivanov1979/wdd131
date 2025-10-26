@@ -1,16 +1,18 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Iván Sanhueza — WDD 131 — Basic Layout</title>
-  <link rel="stylesheet" href="styles/layout.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WDD131 - Basic Layout</title>
+  <!-- ✅ Correct relative path to your CSS -->
+  <link rel="stylesheet" href="week01/styles/layout.css?v=1">
 </head>
+
 <body>
   <header>
     <h1>Header Content</h1>
-    <nav aria-label="Primary navigation">
-      <ul class="navigation">
+    <nav>
+      <ul>
         <li><a href="#">Home</a></li>
         <li><a href="#">About</a></li>
         <li><a href="#">Affiliates</a></li>
@@ -21,22 +23,17 @@
   </header>
 
   <main>
-    <article>
-      <h2>Main Content</h2>
-      <p>Placeholder main content goes here.</p>
-    </article>
-    <aside>
-      <h2>Sidebar Content</h2>
-      <p>Placeholder sidebar content goes here.</p>
-    </aside>
+    <h2>Main Content</h2>
+    <p>Placeholder main content goes here.</p>
   </main>
 
-  <footer>
-    <p>Footer Content • © <span id="year"></span></p>
-  </footer>
+  <aside>
+    <h2>Sidebar Content</h2>
+    <p>Placeholder sidebar content goes here.</p>
+  </aside>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+  <footer>
+    <p>Footer Content • © 2025</p>
+  </footer>
 </body>
 </html>

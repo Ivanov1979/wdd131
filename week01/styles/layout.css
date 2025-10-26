@@ -1,73 +1,57 @@
-/* Reset */
-* { box-sizing: border-box; margin: 0; padding: 0; }
-
-:root{
-  --brand: #0b5cab;
-  --nav: #333;
-  --ink: #111;
-  --ink-inv: #fff;
-  --bg: #f6f7fb;
-}
-
-/* ✅ Use CSS Grid on the body */
-body{
-  min-height: 100vh;
-  display: grid;
-  grid-template-rows: auto 1fr auto; /* header | main | footer */
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  color: var(--ink);
-  background: var(--bg);
+/* Reset default margins and fonts */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f4ff;
+  color: #222;
 }
 
 /* Header */
-header{ background: var(--brand); color: var(--ink-inv); }
-header h1{ text-align: center; padding: 1rem; }
-
-/* ✅ Use CSS Flex on the navigation menu */
-.navigation{
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: .25rem;
-  background: var(--nav);
-  padding: .5rem;
-}
-.navigation li{ flex: 1 1 auto; max-width: 14rem; }
-.navigation a{
-  display: block;
-  color: #eee;
-  text-decoration: none;
-  text-align: center;
-  padding: .6rem .9rem;
-  border-radius: .35rem;
-}
-.navigation a:hover{
-  background: #555;
-  text-decoration: underline;
-  text-decoration-color: yellow;
-}
-
-/* Main layout (stack on mobile, 2 cols on wide) */
-main{
-  display: grid;
-  gap: 1rem;
+header {
+  background-color: #003366;
+  color: white;
   padding: 1rem;
+  text-align: center;
 }
-@media (min-width: 800px){
-  main{ grid-template-columns: 2fr 1fr; } /* article | aside */
+
+/* Navigation */
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
 }
-article, aside{
-  background: #fff;
-  border: 1px solid #e3e6ef;
-  border-radius: .5rem;
+
+nav a {
+  text-decoration: none;
+  color: #ffcc00;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* Main content */
+main {
+  padding: 1.5rem;
+  background-color: #ffffff;
+}
+
+/* Sidebar */
+aside {
+  background-color: #e6eaff;
   padding: 1rem;
 }
 
 /* Footer */
-footer{
+footer {
+  background-color: #003366;
+  color: white;
   text-align: center;
-  padding: 1rem;
-  background: #0a4c8f;
-  color: var(--ink-inv);
+  padding: 0.75rem;
 }
