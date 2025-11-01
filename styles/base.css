@@ -7,6 +7,9 @@
   --radius:14px;
   --shadow:0 8px 20px rgba(0,0,0,.08)
 }
+main {
+  padding: 1rem;
+}
 
 *{box-sizing:border-box}
 *::before,*::after{box-sizing:border-box}
