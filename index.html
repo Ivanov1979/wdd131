@@ -1,41 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>WDD131 - Basic Layout</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>WDD 131 - Dynamic Web Fundamentals - Ivan Sanhueza</title>
+  <meta name="description" content="WDD 131 - Dynamic Web Fundamentals portfolio of Ivan Sanhueza featuring assignments and projects.">
+  <meta name="author" content="Ivan Sanhueza">
 
-  <!-- Correct relative path to your stylesheet -->
-  <link rel="stylesheet" href="week01/styles/layout.css?v=1">
+  <link rel="stylesheet" href="styles/base.css" />
+  <script src="scripts/getdates.js" defer></script>
 </head>
 
 <body>
-  <header>
-    <h1>Header Content</h1>
+  <header class="site-header">
+    <h1>WDD 131: Dynamic Web Fundamentals <span class="accent">– Ivan Sanhueza</span></h1>
     <nav>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Affiliates</a></li>
-        <li><a href="#">History</a></li>
-        <li><a href="#">Contact</a></li>
+      <ul class="topnav">
+        <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://byupw.instructure.com/" target="_blank" rel="noopener">Canvas</a></li>
+        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=eng&id=p7#p7" target="_blank" rel="noopener">Scripture</a></li>
+        <li><a href="./final-project/">Final Project</a></li>
       </ul>
     </nav>
   </header>
 
-  <main>
-    <h2>Main Content</h2>
-    <p>Placeholder main content goes here.</p>
+  <main class="content-grid">
+    <!-- LEFT CARD -->
+    <section class="card">
+      <h2>About This Course</h2>
+      <div class="image-box">
+        <img src="images/flag.jpg" alt="Official Flag of Chile" class="equal-img" loading="lazy">
+      </div>
+      <p>
+        This site contains my weekly assignments and projects for WDD 131 - Dynamic Web Fundamentals. 
+        It demonstrates concepts in HTML, CSS, and JavaScript including responsive layouts, semantic elements, and DOM interaction.
+      </p>
+    </section>
+
+    <!-- RIGHT CARD -->
+    <section class="card">
+      <h2>About Me</h2>
+      <div class="image-box">
+        <img src="images/profile.jpg" alt="Portrait of Ivan Sanhueza" class="equal-img" loading="lazy">
+      </div>
+      <p>
+        I am a mathematics teacher learning front-end web development to create interactive and engaging 
+        educational experiences for my students. This website serves as my learning portfolio during this course.
+      </p>
+    </section>
   </main>
 
-  <aside>
-    <h2>Sidebar Content</h2>
-    <p>Placeholder sidebar content goes here.</p>
-  </aside>
-
-  <footer>
-    <p>Footer Content • © 2025</p>
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> • <strong>Ivan Sanhueza</strong> • Chile</p>
+    <p class="lastmod">Last Modification: <span id="lastModified"></span></p>
   </footer>
 </body>
 </html>
-
