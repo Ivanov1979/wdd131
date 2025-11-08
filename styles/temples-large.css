@@ -1,0 +1,6 @@
+.hamburger{display:none}
+.bar .wrap{gap:2rem}
+.nav{display:flex !important;flex-direction:row;margin-left:auto;gap:1rem;padding:0}
+.nav a{padding:.45rem .9rem}
+.gallery{grid-template-columns:repeat(3,1fr)}
+figure img{width:100%;max-width:300px}

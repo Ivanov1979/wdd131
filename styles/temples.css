@@ -1,0 +1,95 @@
+:root{
+  --blue:#0b4faf;
+  --blue-dark:#073b83;
+  --ink:#111;
+  --paper:#ffffff;
+  --muted:#555;
+  --maxw:980px;
+  --radius:12px;
+}
+
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);background:var(--paper);line-height:1.5}
+
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 1rem}
+
+.bar{background:var(--blue);color:#fff}
+.bar .wrap{display:flex;align-items:center;gap:1rem;min-height:64px}
+.brand{font-family:Merriweather,Georgia,serif;font-weight:700;font-size:1.6rem}
+
+.hamburger{
+  margin-left:auto;font-size:1.25rem;line-height:1;background:transparent;
+  border:1px solid #ffffff80;color:#fff;padding:.4rem .6rem;
+  border-radius:8px;cursor:pointer
+}
+
+.nav{list-style:none;margin:0;padding:.5rem 0;display:none;flex-direction:column;gap:.35rem}
+.nav.open{display:flex}
+.nav a{
+  color:#fff;text-decoration:none;padding:.35rem .6rem;border-radius:8px;display:block
+}
+.nav a:hover,.nav a:focus{background:#ffffff22}
+.nav a.active{background:#ffffff33}
+
+main.wrap{padding:1.2rem 1rem 2rem}
+h1{text-align:center;font-family:Merriweather,Georgia,serif;margin:1rem 0 1.2rem}
+
+.gallery{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:2rem 1.5rem;
+  justify-items:center
+}
+
+figure{margin:0;text-align:center}
+figure img{
+  width:320px;
+  aspect-ratio:16/10;
+  object-fit:cover;
+  border-radius:var(--radius);
+  box-shadow:0 2px 8px #00000015
+}
+figcaption{margin-top:.5rem;color:var(--muted)}
+
+.footer .wrap{flex-direction:column;gap:.3rem;padding:.8rem 1rem}
+.footer p{margin:0;color:#fff}
+.footer .muted{opacity:.9}
+.footer .wrap {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: .3rem;
+  padding: .8rem 1rem;
+  text-align: center;
+  font-weight: 500;
+}
+
+.footer p {
+  margin: 0;
+  color: #fff;
+}
+
+.footer .muted {
+  font-size: 0.9rem;
+  opacity: .9;
+}
+.footer .wrap {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: .3rem;
+  padding: .8rem 1rem;
+  text-align: center;
+  font-weight: 500;
+}
+
+.footer p {
+  margin: 0;
+  color: #fff;
+}
+
+.footer .muted {
+  font-size: 0.9rem;
+  opacity: .9;
+}
