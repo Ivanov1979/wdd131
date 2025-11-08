@@ -5,20 +5,20 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Temple Album</title>
   <meta name="description" content="A responsive picture album featuring temple images, designed with CSS Grid and JavaScript to demonstrate accessibility and mobile-first web development.">
-
   <meta name="author" content="Iván Sanhueza">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="styles/temples.css">
-  <link rel="stylesheet" href="styles/temples-large.css" media="(min-width: 768px)">
   <script src="scripts/temples.js" defer></script>
 </head>
 <body>
   <header class="bar">
     <div class="wrap">
       <span class="brand">Temple Album</span>
-      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-controls="primary-nav" aria-expanded="false">☰</button>
+      <button class="hamburger" aria-expanded="false" aria-controls="primary-nav" aria-label="Menu">☰</button>
       <nav aria-label="Primary">
         <ul id="primary-nav" class="nav">
           <li><a href="index.html" class="active">Home</a></li>
@@ -34,7 +34,7 @@
   <main class="wrap">
     <h1>Home</h1>
 
-    <section class="gallery" aria-label="Temple gallery">
+    <section class="gallery" aria-label="Temple Gallery">
       <figure>
         <img src="images/concepcion-temple.jpg" alt="Concepción Chile Temple">
         <figcaption>Concepción Chile Temple</figcaption>
@@ -74,7 +74,7 @@
     </section>
   </main>
 
-  <footer class="bar footer">
+  <footer class="footer">
     <div class="wrap">
       <p>&copy; <span id="year"></span> 🌸 Iván Sanhueza 🌸 Chile</p>
       <p class="muted">Last Modification: <span id="last-mod"></span></p>

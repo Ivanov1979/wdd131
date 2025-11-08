@@ -1,13 +1,19 @@
-document.getElementById("year").textContent = new Date().getFullYear();
-document.getElementById("last-mod").textContent = document.lastModified;
+const btn = document.querySelector('.hamburger');
+const nav = document.querySelector('.nav');
+const year = document.getElementById('year');
+const lastMod = document.getElementById('last-mod');
 
-const btn = document.getElementById("hamburger");
-const list = document.getElementById("primary-nav");
-
-if (btn && list) {
-  btn.addEventListener("click", () => {
-    const isOpen = list.classList.toggle("open");
-    btn.setAttribute("aria-expanded", String(isOpen));
-    btn.textContent = isOpen ? "✕" : "☰";
+if (btn && nav) {
+  btn.addEventListener('click', () => {
+    const open = nav.classList.toggle('open');
+    btn.setAttribute('aria-expanded', String(open));
   });
+}
+
+if (year) {
+  year.textContent = new Date().getFullYear();
+}
+
+if (lastMod) {
+  lastMod.textContent = document.lastModified;
 }
