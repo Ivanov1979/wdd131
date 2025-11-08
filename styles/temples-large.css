@@ -1,9 +1,10 @@
 @media (min-width:768px) {
-  /* Keep centering handled by .wrap; just change layout */
-  main.wrap {
+  /* Keep the .wrap centering; only make the gallery a grid */
+  .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1rem;
+    grid-template-columns: repeat(2, minmax(300px, 1fr));
+    gap: 2rem;
+    justify-items: center;
   }
 
   nav ul {
@@ -19,7 +20,6 @@
 }
 
 @media (min-width:1000px) {
-  /* Optional wider layout */
   .gallery {
     grid-template-columns: repeat(3, minmax(300px, 1fr));
   }
