@@ -1,23 +1,27 @@
 @media (min-width:768px) {
-  header, nav, footer {
-    max-width:1200px;
-    margin:0 auto;
+  /* Keep centering handled by .wrap; just change layout */
+  main.wrap {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
   }
 
   nav ul {
-    display:flex;
-    justify-content:center;
-    gap:1.5rem;
-  }
-
-  main {
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-    gap:1rem;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
   }
 
   figure img {
-    max-width:100%;
-    height:auto;
+    max-width: 100%;
+    height: auto;
   }
 }
+
+@media (min-width:1000px) {
+  /* Optional wider layout */
+  .gallery {
+    grid-template-columns: repeat(3, minmax(300px, 1fr));
+  }
+}
+
