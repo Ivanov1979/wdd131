@@ -70,7 +70,11 @@ header,footer,main{
 }
 .nav a:hover,
 .nav a:focus{background:#ffffff22}
-.nav a.active{background:#ffffff33}
+.nav a.active {
+  background: #ffffff55; /* stronger white overlay for contrast */
+  font-weight: 600;      /* makes text a bit bolder */
+}
+
 
 /* MAIN */
 main.wrap{
