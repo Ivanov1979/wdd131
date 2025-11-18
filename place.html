@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Valdivia, Chile</title>
+  <meta name="description" content="City information and weather for Valdivia, Chile.">
+  <meta name="author" content="Iván Sanhueza">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/place.css">
+  <script src="scripts/place.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Valdivia, Chile</h1>
+  </header>
+
+  <main>
+    <section class="hero">
+      <picture>
+        <source srcset="images/valdivia-large.webp" media="(min-width: 900px)">
+        <source srcset="images/valdivia-medium.webp" media="(min-width: 600px)">
+        <img src="images/valdivia-small.webp" alt="Aerial view of Valdivia, Chile" class="hero-image">
+      </picture>
+
+      <section class="card data-card">
+        <div class="card-header">
+          <h2>Data</h2>
+        </div>
+        <div class="card-body">
+          <dl>
+            <div class="row">
+              <dt>Country:</dt>
+              <dd>Chile</dd>
+            </div>
+            <div class="row">
+              <dt>Region:</dt>
+              <dd>Los Ríos</dd>
+            </div>
+            <div class="row">
+              <dt>Population:</dt>
+              <dd>≈ 170,000</dd>
+            </div>
+            <div class="row">
+              <dt>Founded:</dt>
+              <dd>1552</dd>
+            </div>
+            <div class="row">
+              <dt>Main Rivers:</dt>
+              <dd>Calle-Calle, Valdivia, Cruces</dd>
+            </div>
+            <div class="row">
+              <dt>Language:</dt>
+              <dd>Spanish</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="card weather-card">
+        <div class="card-header">
+          <h2 class="weather-title">Weather</h2>
+          <img src="images/weather-icon.svg" alt="Weather icon" class="weather-icon">
+        </div>
+        <div class="card-body">
+          <dl>
+            <div class="row">
+              <dt>Temperature:</dt>
+              <dd><span id="temperature">9</span> °C</dd>
+            </div>
+            <div class="row">
+              <dt>Conditions:</dt>
+              <dd>Cloudy</dd>
+            </div>
+            <div class="row">
+              <dt>Wind:</dt>
+              <dd><span id="wind">6</span> km/h</dd>
+            </div>
+            <div class="row">
+              <dt>Wind Chill:</dt>
+              <dd><span id="windchill">N/A</span> °C</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy;<span id="currentyear"></span> Iván Sanhueza — Valdivia, Chile</p>
+    <p>Last Modification: <span id="lastmodified"></span></p>
+  </footer>
+</body>
+</html>
+
+
