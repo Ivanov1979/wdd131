@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Week 04 – Lazy Loading Images</title>
+  <meta name="description" content="Lazy loading demonstration with portrait images of Helmut the cat and his owner Alonso.">
+  <meta name="author" content="Iván Sanhueza">
+
+  <link rel="stylesheet" href="styles/lazyload.css">
+  <script src="scripts/lazyload.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <h1>Lazy Loading Observation</h1>
+  </header>
+
+  <main>
+
+    <p class="intro">
+      Scroll slowly and watch the Network tab in DevTools.
+      Images will load only when they enter the viewport. 
+    </p>
+
+    <!-- Your optimized cat images -->
+    <img class="lazy-img" src="images/cat1_400x600.jpeg" loading="lazy" alt="Helmut resting on a teal blanket">
+    <img class="lazy-img" src="images/cat2_400x600.jpeg" loading="lazy" alt="Helmut the cat wearing a striped tie">
+    <img class="lazy-img" src="images/cat3_400x600.jpeg" loading="lazy" alt="Helmut being held and cuddled">
+    <img class="lazy-img" src="images/cat4_400x600.jpeg" loading="lazy" alt="Helmut wrapped in a decorative garland">
+    <img class="lazy-img" src="images/cat5_400x600.jpeg" loading="lazy" alt="Close-up portrait of Helmut the cat">
+
+    <!-- Alonso and Helmut -->
+    <img
+      class="lazy-img"
+      src="images/alonso_helmut_400x600.jpeg"
+      loading="lazy"
+      alt="Alonso standing confidently in a suit. He is the caring owner of Helmut the cat."
+    >
+
+    <!-- Description Section -->
+    <section class="description">
+      <h2>About Helmut</h2>
+      <p>
+        Helmut is a charming and expressive orange-and-white cat with a gentle personality 
+        and bright, curious eyes. His soft, patterned coat and long white whiskers give him 
+        a playful yet elegant look. Helmut is deeply attached to his owner, <strong>Alonso</strong>, 
+        and their bond is easy to see—Helmut feels completely comfortable and safe whenever 
+        he’s with him. Whether he’s resting, exploring, or posing for a photo, Helmut always 
+        brings warmth and energy to every moment.
+      </p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Iván Sanhueza</p>
+    <p id="lastModified"></p>
+  </footer>
+</body>
+</html>
+
