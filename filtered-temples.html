@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Filtered Temples | WDD 131</title>
+  <meta name="description" content="Filtered list of temples using JavaScript.">
+  <meta name="author" content="Iván Sanhueza">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/filtered-temples.css">
+</head>
+<body>
+  <header>
+    <h1>Latter-day Saint Temples</h1>
+    <nav>
+      <ul>
+        <li><button id="home">Home</button></li>
+        <li><button id="old">Old</button></li>
+        <li><button id="new">New</button></li>
+        <li><button id="large">Large</button></li>
+        <li><button id="small">Small</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="temple-cards" class="temple-grid"></section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="currentyear"></span> | Iván Sanhueza</p>
+    <p>Last modified: <span id="lastModified"></span></p>
+  </footer>
+
+  <script src="scripts/filtered-temples.js" defer></script>
+</body>
+</html>
