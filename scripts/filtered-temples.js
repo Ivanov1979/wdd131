@@ -106,13 +106,19 @@ function renderTemples(list) {
   list.forEach((temple) => {
     const card = document.createElement("article");
     card.classList.add("temple-card");
+
     card.innerHTML = `
-      <img src="${temple.imageUrl}" alt="${temple.templeName}" loading="lazy" decoding="async">
+      <img src="${temple.imageUrl}"
+           alt="${temple.templeName}"
+           loading="lazy"
+           decoding="async">
+
       <h2>${temple.templeName}</h2>
       <p><strong>Location:</strong> ${temple.location}</p>
       <p><strong>Dedicated:</strong> ${temple.dedicated}</p>
       <p><strong>Area:</strong> ${temple.area.toLocaleString()} sq ft</p>
     `;
+
     fragment.appendChild(card);
   });
 
@@ -126,11 +132,30 @@ const smallTemples = temples.filter(t => t.area < 10000);
 
 renderTemples(temples);
 
-document.querySelector("#home").addEventListener("click", () => renderTemples(temples));
-document.querySelector("#old").addEventListener("click", () => renderTemples(oldTemples));
-document.querySelector("#new").addEventListener("click", () => renderTemples(newTemples));
-document.querySelector("#large").addEventListener("click", () => renderTemples(largeTemples));
-document.querySelector("#small").addEventListener("click", () => renderTemples(smallTemples));
+document.querySelector("#home").addEventListener("click", (event) => {
+  event.preventDefault();
+  renderTemples(temples);
+});
+
+document.querySelector("#old").addEventListener("click", (event) => {
+  event.preventDefault();
+  renderTemples(oldTemples);
+});
+
+document.querySelector("#new").addEventListener("click", (event) => {
+  event.preventDefault();
+  renderTemples(newTemples);
+});
+
+document.querySelector("#large").addEventListener("click", (event) => {
+  event.preventDefault();
+  renderTemples(largeTemples);
+});
+
+document.querySelector("#small").addEventListener("click", (event) => {
+  event.preventDefault();
+  renderTemples(smallTemples);
+});
 
 document.querySelector("#currentyear").textContent = new Date().getFullYear();
 document.querySelector("#lastModified").textContent = document.lastModified;

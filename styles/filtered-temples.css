@@ -9,6 +9,7 @@ body {
   color: #222;
 }
 
+/* HEADER & NAV */
 header {
   background-color: #2c3e50;
   color: white;
@@ -26,18 +27,18 @@ nav ul {
   margin: 1rem 0 0;
 }
 
-nav button {
+nav a {
+  display: inline-block;
   padding: 0.6rem 1.4rem;
   background-color: white;
   color: #2c3e50;
-  border: none;
+  text-decoration: none;
   border-radius: 2rem;
   font-weight: 600;
-  cursor: pointer;
   transition: 0.2s;
 }
 
-nav button:hover {
+nav a:hover {
   background-color: #ecf0f1;
 }
 
@@ -80,6 +81,7 @@ nav button:hover {
   font-size: 0.9rem;
 }
 
+/* FOOTER */
 footer {
   text-align: center;
   background: #2c3e50;
@@ -87,4 +89,33 @@ footer {
   padding: 1rem;
   margin-top: 2rem;
 }
+
+@media (max-width: 600px) {
+  header {
+    padding: 1rem 0.5rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .temple-grid {
+    padding: 1rem;
+  }
+}
+
+
+@media (min-width: 900px) {
+  header {
+    padding-inline: 4rem;
+  }
+
+  .temple-grid {
+    max-width: 1200px;
+    margin: 0 auto 2rem;
+    gap: 2rem;
+  }
+}
+
 
