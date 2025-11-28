@@ -1,0 +1,28 @@
+/* Basic styles for the Site Plan document */
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f7f7fb; /* Light background */
+  color: #222222;
+  margin: 20px;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  color: #003366; /* Primary dark blue */
+}
+
+/* Simple accent line under section headings */
+h2 {
+  border-bottom: 3px solid #ffb703; /* Accent yellow */
+  padding-bottom: 4px;
+}
+
+/* Make wireframe blocks easy to read */
+pre {
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  padding: 10px;
+  border-radius: 6px;
+  white-space: pre-wrap;
+}
