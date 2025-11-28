@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Review Confirmation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Confirmation page for the product review form.">
+  <link rel="stylesheet" href="../styles/form.css">
+  <script src="../scripts/review.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Thank You for Your Review!</h1>
+  </header>
+
+  <main>
+    <p>Your product review has been submitted.</p>
+
+    <p>
+      This is review number
+      <strong id="reviewCount">0</strong>
+      recorded on this browser.
+    </p>
+
+    <p><a href="form.html">Submit another review</a></p>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Iván Sanhueza | WDD 131 | BYU-Idaho</p>
+  </footer>
+
+  <script>
+    const yearSpan = document.getElementById("year");
+    if (yearSpan) {
+      yearSpan.textContent = new Date().getFullYear();
+    }
+  </script>
+</body>
+</html>

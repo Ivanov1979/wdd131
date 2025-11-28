@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Product Review Form</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Product review form with rating, features, and written feedback.">
+  <link rel="stylesheet" href="../styles/form.css">
+  <script src="../scripts/form.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Product Review</h1>
+  </header>
+
+  <main>
+    <!-- method=get and action=review.html (required) -->
+    <form id="productReviewForm" method="get" action="review.html">
+      <!-- Product Name (select, required) -->
+      <label for="product">
+        Product Name <span class="required">*</span>
+      </label>
+      <select id="product" name="product" required>
+        <option value="" disabled selected>Select a Product ...</option>
+        <!-- Other options added dynamically by form.js -->
+      </select>
+
+      <!-- Overall Rating (5 radios, same name, required) -->
+      <fieldset>
+        <legend>Overall Rating <span class="required">*</span></legend>
+        <p class="hint">(1 = Poor, 5 = Excellent)</p>
+        <div class="rating-group">
+          <label for="rating1">
+            <input type="radio" id="rating1" name="rating" value="1" required>
+            ☆
+          </label>
+          <label for="rating2">
+            <input type="radio" id="rating2" name="rating" value="2">
+            ☆☆
+          </label>
+          <label for="rating3">
+            <input type="radio" id="rating3" name="rating" value="3">
+            ☆☆☆
+          </label>
+          <label for="rating4">
+            <input type="radio" id="rating4" name="rating" value="4">
+            ☆☆☆☆
+          </label>
+          <label for="rating5">
+            <input type="radio" id="rating5" name="rating" value="5">
+            ☆☆☆☆☆
+          </label>
+        </div>
+      </fieldset>
+
+      <!-- Date of Installation -->
+      <label for="installationDate">
+        Date of Installation <span class="required">*</span>
+      </label>
+      <input type="date" id="installationDate" name="installationDate" required>
+
+      <!-- Useful Features (checkboxes) -->
+      <fieldset>
+        <legend>Which features did you find useful? (Check all that apply)</legend>
+
+        <label for="featureDurability">
+          <input type="checkbox" id="featureDurability" name="features" value="Durability">
+          Durability
+        </label>
+
+        <label for="featureEaseOfUse">
+          <input type="checkbox" id="featureEaseOfUse" name="features" value="Ease of Use">
+          Ease of Use
+        </label>
+
+        <label for="featurePerformance">
+          <input type="checkbox" id="featurePerformance" name="features" value="Performance">
+          Performance
+        </label>
+
+        <label for="featureDesign">
+          <input type="checkbox" id="featureDesign" name="features" value="Design">
+          Design
+        </label>
+      </fieldset>
+
+      <!-- Written Review (optional) -->
+      <label for="reviewText">
+        Written Review <span class="optional">(Optional)</span>
+      </label>
+      <textarea id="reviewText" name="reviewText" rows="4"></textarea>
+
+      <!-- User Name (optional) -->
+      <label for="userName">
+        Your Name <span class="optional">(Optional)</span>
+      </label>
+      <input type="text" id="userName" name="userName" placeholder="First name">
+
+      <!-- Submit -->
+      <input type="submit" value="Submit Review">
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Iván Sanhueza | WDD 131 | BYU-Idaho</p>
+  </footer>
+
+  <script>
+    // simple footer year (optional, no rubric impact)
+    const yearSpan = document.getElementById("year");
+    if (yearSpan) {
+      yearSpan.textContent = new Date().getFullYear();
+    }
+  </script>
+</body>
+</html>
