@@ -4,38 +4,36 @@
   <meta charset="UTF-8">
   <title>Review Confirmation</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Confirmation page for the product review form.">
+  <meta name="description" content="Your product review has been submitted.">
   <meta name="author" content="Iván Sanhueza">
   <link rel="stylesheet" href="styles/form.css">
   <script src="scripts/review.js" defer></script>
 </head>
 
 <body>
-  <header>
-    <h1>Thank You for Your Review!</h1>
-  </header>
 
-  <main>
-    <p>Your product review has been submitted.</p>
+<header>
+  <h1>Thank You for Your Review!</h1>
+</header>
 
-    <p>
-      This is review number
-      <strong id="reviewCount">0</strong>
-      recorded on this browser.
-    </p>
+<main>
+  <p>Your product review has been submitted successfully.</p>
 
-    <p><a href="form.html">Submit another review</a></p>
-  </main>
+  <p>
+    Total reviews submitted on this browser:
+    <strong id="reviewCount">0</strong>
+  </p>
 
-  <footer>
-    <p>&copy; <span id="year"></span> Iván Sanhueza | WDD 131 | BYU-Idaho</p>
-  </footer>
+  <a class="button" href="form.html">Submit Another Review</a>
+</main>
 
-  <script>
-    const yearSpan = document.getElementById("year");
-    if (yearSpan) {
-      yearSpan.textContent = new Date().getFullYear();
-    }
-  </script>
+<footer>
+  <p>&copy; <span id="year"></span> Iván Sanhueza | WDD 131 | BYU-Idaho</p>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
 </body>
 </html>

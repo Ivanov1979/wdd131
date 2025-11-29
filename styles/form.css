@@ -1,122 +1,109 @@
-/* styles/form.css */
-
-/* Page layout */
+/* Base styling */
 body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: system-ui, sans-serif;
+  background: #f4f4f7;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f8;
-  color: #222222;
+  color: #222;
 }
 
+/* Header */
 header {
-  background-color: #3b0b45; /* dark purple */
-  color: #ffffff;
+  background: #3b0b45;
+  color: white;
   padding: 1rem;
   text-align: center;
 }
 
-header h1 {
+h1 {
   margin: 0;
 }
 
+/* Main container */
 main {
-  max-width: 480px;
+  max-width: 500px;
   margin: 1.5rem auto;
-  background-color: #fdfdfd;
-  padding: 1.25rem 1.5rem;
-  border-radius: 0.75rem;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 /* Form layout */
 form {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: 1rem;
 }
 
 label {
-  display: block;
   font-weight: 600;
-  margin-bottom: 0.25rem;
 }
 
-input[type="text"],
-input[type="date"],
-select,
-textarea {
+input, select, textarea {
   width: 100%;
-  padding: 0.5rem;
-  border-radius: 0.5rem;
-  border: 1px solid #cccccc;
-  font: inherit;
+  padding: .6rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
 }
 
 textarea {
   resize: vertical;
 }
 
-fieldset {
-  border: 1px solid #dddddd;
-  border-radius: 0.5rem;
-  padding: 0.5rem 0.75rem 0.75rem;
-}
-
-legend {
-  font-weight: 600;
-}
-
-.rating-group {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-top: 0.25rem;
-}
-
-.hint {
-  font-size: 0.85rem;
-  color: #666666;
-  margin-top: 0.25rem;
-}
-
 .required {
   color: #b00020;
-  font-weight: 700;
-  margin-left: 0.15rem;
+  margin-left: 4px;
 }
 
 .optional {
   font-weight: 400;
-  font-size: 0.85rem;
-  color: #666666;
+  color: #666;
+  margin-left: 4px;
 }
 
-input[type="submit"] {
-  padding: 0.6rem 1rem;
-  margin-top: 0.5rem;
+fieldset {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+legend {
+  font-weight: bold;
+}
+
+.hint {
+  margin: 0;
+  font-size: .9rem;
+  color: #666;
+}
+
+.rating label {
+  margin-right: .5rem;
+}
+
+/* Buttons */
+input[type="submit"],
+.button {
+  background: #3b0b45;
+  color: white;
   border: none;
-  border-radius: 999px;
-  background-color: #3b0b45;
-  color: #ffffff;
-  font-weight: 600;
+  padding: .8rem;
+  text-align: center;
+  border-radius: 50px;
   cursor: pointer;
+  font-weight: 600;
 }
 
-input[type="submit"]:hover {
+input[type="submit"]:hover,
+.button:hover {
   opacity: 0.9;
 }
 
+/* Footer */
 footer {
   text-align: center;
-  padding: 1rem 0;
-  font-size: 0.9rem;
-  color: #555555;
-}
-
-/* Simple tweak for larger screens */
-@media (min-width: 768px) {
-  main {
-    max-width: 600px;
-  }
+  padding: 1rem;
+  color: #555;
 }
