@@ -26,22 +26,38 @@
         <!-- Options are populated by scripts/form.js -->
       </select>
 
-      <!-- Overall Rating -->
-<fieldset>
-  <legend>Which features did you find useful? (Check all that apply)</legend>
+      <!-- Overall Rating (5 radio buttons) -->
+      <fieldset>
+        <legend>Overall Rating <span class="required">*</span></legend>
+        <p class="hint">(1 = Poor, 5 = Excellent)</p>
 
-  <input type="checkbox" id="feature-durability" name="features" value="Durability">
-  <label for="feature-durability">Durability</label>
+        <div class="rating-group">
+          <label for="rating1">
+            <input type="radio" id="rating1" name="rating" value="1" required>
+            ☆
+          </label>
 
-  <input type="checkbox" id="feature-ease" name="features" value="Ease of Use">
-  <label for="feature-ease">Ease of Use</label>
+          <label for="rating2">
+            <input type="radio" id="rating2" name="rating" value="2" required>
+            ☆☆
+          </label>
 
-  <input type="checkbox" id="feature-performance" name="features" value="Performance">
-  <label for="feature-performance">Performance</label>
+          <label for="rating3">
+            <input type="radio" id="rating3" name="rating" value="3" required>
+            ☆☆☆
+          </label>
 
-  <input type="checkbox" id="feature-design" name="features" value="Design">
-  <label for="feature-design">Design</label>
-</fieldset>
+          <label for="rating4">
+            <input type="radio" id="rating4" name="rating" value="4" required>
+            ☆☆☆☆
+          </label>
+
+          <label for="rating5">
+            <input type="radio" id="rating5" name="rating" value="5" required>
+            ☆☆☆☆☆
+          </label>
+        </div>
+      </fieldset>
 
       <!-- Date of Installation -->
       <label for="installationDate">
@@ -49,29 +65,21 @@
       </label>
       <input type="date" id="installationDate" name="installationDate" required>
 
-      <!-- Useful Features -->
+      <!-- Useful Features (checkboxes with proper ids and labels) -->
       <fieldset>
         <legend>Which features did you find useful? (Check all that apply)</legend>
 
-        <label for="feature-durability">
-          <input type="checkbox" id="feature-durability" name="features" value="Durability">
-          Durability
-        </label>
+        <input type="checkbox" id="feature-durability" name="features" value="Durability">
+        <label for="feature-durability">Durability</label>
 
-        <label for="feature-ease">
-          <input type="checkbox" id="feature-ease" name="features" value="Ease of Use">
-          Ease of Use
-        </label>
+        <input type="checkbox" id="feature-ease" name="features" value="Ease of Use">
+        <label for="feature-ease">Ease of Use</label>
 
-        <label for="feature-performance">
-          <input type="checkbox" id="feature-performance" name="features" value="Performance">
-          Performance
-        </label>
+        <input type="checkbox" id="feature-performance" name="features" value="Performance">
+        <label for="feature-performance">Performance</label>
 
-        <label for="feature-design">
-          <input type="checkbox" id="feature-design" name="features" value="Design">
-          Design
-        </label>
+        <input type="checkbox" id="feature-design" name="features" value="Design">
+        <label for="feature-design">Design</label>
       </fieldset>
 
       <!-- Written Review (optional) -->
