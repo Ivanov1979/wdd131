@@ -10,20 +10,21 @@ const products = [
 ];
 
 document.addEventListener("DOMContentLoaded", () => {
-  // Populate the Product select
-  const select = document.querySelector("#product");
-  if (select) {
+  // Populate the Product <select>
+  const productSelect = document.querySelector("#product");
+  if (productSelect) {
     products.forEach((product) => {
       const option = document.createElement("option");
-      option.value = product.id;        // value = id
+      // Per instructions: value = id, visible text = name
+      option.value = product.id;
       option.textContent = product.name;
-      select.appendChild(option);
+      productSelect.appendChild(option);
     });
   }
 
-  // Footer year
-  const yearSpan = document.querySelector("#year");
-  if (yearSpan) {
-    yearSpan.textContent = new Date().getFullYear();
+  // Set footer year
+  const yearElement = document.getElementById("year");
+  if (yearElement) {
+    yearElement.textContent = new Date().getFullYear();
   }
 });
