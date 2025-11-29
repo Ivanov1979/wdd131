@@ -1,3 +1,5 @@
+// scripts/form.js
+
 // Product array provided by the assignment
 const products = [
   { id: "fc-1888", name: "Flux Capacitor", averagerating: 4.5 },
@@ -7,11 +9,21 @@ const products = [
   { id: "jj-1969", name: "Warp Equalizer", averagerating: 5.0 }
 ];
 
-const select = document.querySelector("#product");
+document.addEventListener("DOMContentLoaded", () => {
+  // Populate the Product select
+  const select = document.querySelector("#product");
+  if (select) {
+    products.forEach((product) => {
+      const option = document.createElement("option");
+      option.value = product.id;        // value = id
+      option.textContent = product.name;
+      select.appendChild(option);
+    });
+  }
 
-products.forEach(product => {
-  const option = document.createElement("option");
-  option.value = product.id;      // required: value = id
-  option.textContent = product.name;
-  select.appendChild(option);
+  // Footer year
+  const yearSpan = document.querySelector("#year");
+  if (yearSpan) {
+    yearSpan.textContent = new Date().getFullYear();
+  }
 });
