@@ -1,8 +1,6 @@
 // scripts/review.js
-
 document.addEventListener("DOMContentLoaded", () => {
   const key = "reviewCount";
-
   const currentCount = Number(localStorage.getItem(key)) || 0;
   const newCount = currentCount + 1;
 

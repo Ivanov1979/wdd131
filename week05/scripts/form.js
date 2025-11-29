@@ -33,10 +33,11 @@ const products = [
 const productSelect = document.querySelector("#product");
 
 if (productSelect) {
-  products.forEach(product => {
+  products.forEach((product) => {
     const option = document.createElement("option");
-    option.value = product.id;       // value = id (per instructions)
-    option.textContent = product.name; // display = name
+    // Per instructions: value = id, visible text = name
+    option.value = product.id;
+    option.textContent = product.name;
     productSelect.appendChild(option);
   });
 }

@@ -5,8 +5,8 @@
   <title>Product Review Form</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Product review form with rating, features, and written feedback.">
-  <link rel="stylesheet" href="../styles/form.css">
-  <script src="../scripts/form.js" defer></script>
+  <link rel="stylesheet" href="styles/form.css">
+  <script src="scripts/form.js" defer></script>
 </head>
 <body>
   <header>
@@ -14,18 +14,18 @@
   </header>
 
   <main>
-    <!-- method=get and action=review.html (required) -->
+    <!-- method=get and action=review.html (per instructions) -->
     <form id="productReviewForm" method="get" action="review.html">
-      <!-- Product Name (select, required) -->
+      <!-- Product Name -->
       <label for="product">
         Product Name <span class="required">*</span>
       </label>
       <select id="product" name="product" required>
         <option value="" disabled selected>Select a Product ...</option>
-        <!-- Other options added dynamically by form.js -->
+        <!-- Other options are added dynamically by form.js -->
       </select>
 
-      <!-- Overall Rating (5 radios, same name, required) -->
+      <!-- Overall Rating -->
       <fieldset>
         <legend>Overall Rating <span class="required">*</span></legend>
         <p class="hint">(1 = Poor, 5 = Excellent)</p>
@@ -59,7 +59,7 @@
       </label>
       <input type="date" id="installationDate" name="installationDate" required>
 
-      <!-- Useful Features (checkboxes) -->
+      <!-- Useful Features -->
       <fieldset>
         <legend>Which features did you find useful? (Check all that apply)</legend>
 
@@ -96,7 +96,7 @@
       </label>
       <input type="text" id="userName" name="userName" placeholder="First name">
 
-      <!-- Submit -->
+      <!-- Submit button -->
       <input type="submit" value="Submit Review">
     </form>
   </main>
@@ -106,7 +106,7 @@
   </footer>
 
   <script>
-    // simple footer year (optional, no rubric impact)
+    // Simple footer year
     const yearSpan = document.getElementById("year");
     if (yearSpan) {
       yearSpan.textContent = new Date().getFullYear();
@@ -114,3 +114,4 @@
   </script>
 </body>
 </html>
+
